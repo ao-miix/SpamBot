@@ -1,28 +1,17 @@
-import random
-import string
 import discord
 import discord_webhook
 from discord_webhook import *
 import requests
 import json
-import time
 
-def mainheh():
-    print("""
-    fuck this server lets spam
-    """)
-    print(" ")
-    Webhook = input("Enter the webhook url: " )
-    Message = input("Enter what you want to spam: ")
+def mainpog():
+    webhook = input("Enter  webhook url: " )
+    message = input("Enter what you want to spam: ")
     delay = float(input("Enter the delay: "))
     
-    while True:
-        print("Sending: " + Message)
-        print("Sending to: " + Webhook)
-        print("Delay: " + str(delay))
-        
+    while True:  
         try:
-            _data = requests.post(Webhook, json = {'content': Message})
+            _data = requests.post(webhook, json = {'content': message})
             if adata.status_code == 204:
                 print("Sent!")
             else:
@@ -30,4 +19,4 @@ def mainheh():
         except:
             print("Wrong webhook")
 
-mainheh()
+mainpog()
